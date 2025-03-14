@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    display: flex;
+    width: 100%;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 20%;
+    background-color: #fff;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Main Content Styles */
+.main-content {
+    width: 80%;
+    padding: 20px;
+}
+
+.metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.metric {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.activities {
+    list-style-type: none;
+    padding: 0;
+}
+
+.activities li {
+    background-color: #f1f1f1;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .metrics {
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /ojs/
+
+# Avoid infinite redirect loops
+RewriteCond %{REQUEST_URI} !^/backend/route/route.php$
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ backend/routes/router.php [QSA,L]
+
+

@@ -1,0 +1,14 @@
+# Ignore sensitive config files
+/config.php
+/env.php
+/.env
+
+# Ignore PHPMailer library (if downloaded manually)
+mail/PHPMailer/
+
+# Ignore Composer dependencies (if using Composer for PHPMailer)
+vendor/
+
+# Ignore system files
+*.log
+*.DS_Store

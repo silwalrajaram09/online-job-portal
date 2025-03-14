@@ -1,0 +1,58 @@
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+}
+
+.fcontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex-basis: 25%;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    font-size: 20px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px; /* Adjust font size as needed */
+}
+
+.jobsbycategory ul {
+    column-count: 2; /* Divide the list into 2 columns */
+    column-gap: 20px; /* Adjust the gap between columns as needed */
+}

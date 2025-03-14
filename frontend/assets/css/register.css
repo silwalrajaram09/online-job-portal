@@ -1,0 +1,194 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Clean, professional font */
+    background: #f3f4f7; /* Soft background for a modern look */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styling */
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 40px;
+    background: #ffffff; /* Solid white background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    color: #333;
+}
+
+/* Heading Styling */
+.container h1,
+.container h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-left: 4px solid #007bff; /* Accent with a left border */
+    padding-left: 8px;
+}
+
+.container p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #444;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd; /* Subtle border for a clean look */
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f9f9f9; /* Light background for contrast */
+    color: #333;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border: 1px solid #007bff; /* Highlighted border */
+    outline: none;
+    background: #ffffff; /* Solid white on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* Subtle focus shadow */
+}
+
+/* Dropdown Select */
+select {
+    appearance: none; /* Hide default arrow */
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gray" width="18px" height="18px"%3E%3Cpath d="M7 10l5 5 5-5z"/%3E%3C/svg%3E') no-repeat right 12px center;
+    background-size: 18px 18px;
+}
+
+/* Button Styling */
+button,
+input[type="submit"] {
+    background: #007bff; /* Primary blue */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Subtle button shadow */
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5); /* Elevated shadow */
+}
+
+button:active,
+input[type="submit"]:active {
+    transform: translateY(1px); /* Pressed-in effect */
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.2);
+}
+
+/* Links Styling */
+.container a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.container a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+/* Error Message Styling */
+.error {
+    color: #ff4d4d; /* Bright red for visibility */
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Features Section */
+.features {
+    margin-top: 30px;
+    text-align: left;
+    color: #666;
+    font-size: 14px;
+}
+
+.features ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.features li {
+    margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1,
+    h2 {
+        font-size: 18px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="password"],
+    select {
+        font-size: 13px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1,
+    h2 {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%; /* Full-width buttons for small screens */
+    }
+}
