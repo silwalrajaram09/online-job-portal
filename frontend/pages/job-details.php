@@ -1,5 +1,7 @@
 <?php
-session_start();
+
+// session_start();
+require_once 'dashboard.php';
 if (isset($_SESSION['message'])) {
     echo "<div style='color: green; font-weight: bold; margin-bottom: 10px;'>
             {$_SESSION['message']}

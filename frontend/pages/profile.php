@@ -1,12 +1,46 @@
+<?php
+
+require_once 'dashboard.php';
+
+$activeSessionKey = null;
+foreach ($_SESSION as $key => $value) {
+    if (strpos($key, 'user_') === 0) {
+        $activeSessionKey = $key;
+        break;
+    }
+}
+if (!$activeSessionKey || !isset($_SESSION[$activeSessionKey])) {
+    echo "<script>
+        alert('Session expired or unauthorized access! Redirecting to home.');
+        window.location.href = 'home';
+    </script>";
+    exit; 
+}
+$user = $_SESSION[$activeSessionKey];
+$role = $user['role'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>JobPortal</title>
+    <link rel="stylesheet" href="frontend/pages/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
+        #loading {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #333;
+        }
+
         /* General Styles */
         body {
             font-family: Arial, sans-serif;
@@ -163,7 +197,7 @@
             color: red;
         }
 
-        h2 {
+        h3 {
             text-align: center;
             color: #333;
         }
@@ -218,10 +252,11 @@
         } */
     </style>
 </head>
+    </style>
+</head>
 
 <body>
-
-    <div id="#content">
+   
         <div class="profile-container">
             <div class="profile-header">
                 <div class="header-left">
@@ -248,9 +283,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+ 
+   
     <script>
         $(document).ready(function() {
             // Make an AJAX GET request to fetch profile information
@@ -411,9 +445,7 @@
                 }
             });
         });
-    </script>
-
-
+    </script>         
 </body>
 
 </html>

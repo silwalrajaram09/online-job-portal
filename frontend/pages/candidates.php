@@ -1,3 +1,6 @@
+<?php
+require_once 'dashboard.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -287,5 +290,6 @@
     </script>
 
 </body>
-
+<?php require_once 'footer.php'; ?>
+?>
 </html>

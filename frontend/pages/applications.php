@@ -1,3 +1,6 @@
+<?php
+require_once 'dashboard.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
